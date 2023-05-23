@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cricke aninmation</title>
+    <style>
+      .field {
+        width: 90%;
+        height: 90%;
+        position: absolute;
+        border: 2px solid green;
+      }
+      .bat {
+        position: relative;
+        top: 30%;
+        left: 60%;
+        width: 200px;
+        transition: transform 0.3s ease-in;
+      }
+      .field:hover .bat {
+        transform: rotate(60deg);
+        transform-origin: top left;
+      }
+
+      .ball {
+        text-align: center;
+        position: relative;
+        background-color: red;
+        border: 5px solid black;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        top: 25%;
+        left: 43%;
+        transition: transform 1s ease-out 0.3s;
+      }
+
+      .field:hover .ball {
+        transform: translate(-280px) skew(30deg, 20deg) skew(-30deg, -20deg)
+          translateY(-100px) rotate3d(1, 2, 3, 10deg);
+      }
+
+      .inner-ball {
+        text-align: center;
+        position: relative;
+        background-color: rgb(240, 241, 241);
+        /* border: 5px dotted black; */
+        width: 30px;
+        height: 5px;
+        /* border-radius: 50%; */
+        top: 40%;
+        left: 0%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="field">
+      <img class="bat" src="bat.png" alt="" />
+      <div class="ball"><div class="inner-ball"></div></div>
+    </div>
+  </body>
+</html>
